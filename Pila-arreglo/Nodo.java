@@ -1,4 +1,4 @@
-package ___;
+package Pila_arreglo;
 
 /**
  *
