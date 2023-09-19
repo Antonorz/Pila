@@ -1,17 +1,16 @@
 public class ListaSimplementeEnlazada {
-	private Nodo frente;
+	private Nodo primerNodo;
 	private int longitud;
-        private Nodo primerNodo;
 	public ListaSimplementeEnlazada() {
-		frente = null;
+		primerNodo = null;
 		longitud = 0;
 	}
 	public void insertar(int dato) {
 		Nodo nuevoNodo = new Nodo(dato);
-		if (frente == null) {
-			frente = nuevoNodo;
+		if (primerNodo == null) {
+			primerNodo = nuevoNodo;
 		} else {
-			Nodo nodoActual = frente;
+			Nodo nodoActual = primerNodo;
 			while (nodoActual.getSiguiente() != null) {
 				nodoActual = nodoActual.getSiguiente();
 			}
@@ -20,16 +19,16 @@ public class ListaSimplementeEnlazada {
 	longitud++;
 	}
 	public void eliminar() {
-		if (frente != null) {
-			frente = frente.getSiguiente();
+		if (primerNodo != null) {
+			primerNodo = primerNodo.getSiguiente();
 			longitud--;
 		}
 	}
 	public boolean estaVacia() {
-		return frente == null;
+		return primerNodo == null;
 	}
 	public Nodo getFrente() {
-		return frente;
+		return primerNodo;
 	}
 	public int getLongitud() {
 		return longitud;
@@ -40,11 +39,11 @@ public class ListaSimplementeEnlazada {
           System.err.println("Indice fuera de rango");
           return -1;
         }
-        Nodo actualNodo = primerNodo;
+        Nodo actuaNodo = primerNodo;
         for (int i = 0; i < indice; i++) {
-          actualNodo = actualNodo.getSiguiente();
+          actuaNodo = actuaNodo.getSiguiente();
         }
-        return actualNodo.getDato();
+        return actuaNodo.getDato();
     }
     
     public void eliminar(int indice) {
