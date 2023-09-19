@@ -1,9 +1,9 @@
 public class Nodo {
   private int dato;
-  private Nodo primerNodo;
+  private Nodo siguiente;
   public Nodo(int dato) {
     this.dato = dato;
-    this.primerNodo = null;
+    this.siguiente = null;
   }
   public int getDato() {
     return dato;
@@ -12,9 +12,9 @@ public class Nodo {
     this.dato = dato;
   }
   public Nodo getSiguiente() {
-    return primerNodo;
+    return siguiente;
   }
   public void setSiguiente(Nodo siguiente) {
-    this.primerNodo = siguiente;
+    this.siguiente = siguiente;
   }
 }
