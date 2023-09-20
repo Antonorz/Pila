@@ -42,7 +42,7 @@ public class ListaDoblementeEnlazada {
         }
     }
 
-    return nodoActual.getDato();
+    return nodoActua.getDato();
 }
     ////////////////////////////////////////
     public void eliminar(int indice) {
