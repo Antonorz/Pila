@@ -19,18 +19,31 @@ public class ListaDoblementeEnlazada {
         }
         longitud++;
     }
-    ///(/////////////////////
+    ////////////////////////
     public int obtener(int indice) {
-        if (indice < 0 || indice >= longitud) {
-          System.err.println("Indice fuera de rango");
-          return -1;
-        }
-        Nodo actuaNodo = primerNodo;
-        for (int i = 0; i < indice; i++) {
-          actuaNodo = actuaNodo.getSiguiente();
-        }
-        return actuaNodo.getDato();
+    if (indice < 0 || indice >= longitud) {
+        System.err.println("Indice fuera de rango");
+        return -1;
     }
+
+    Nodo nodoActua;
+    // Comprueba si el índice está más cerca del principio o del final de la lista
+    if (indice < longitud / 2) {
+        // Si está más cerca del principio, comienza desde el primer nodo
+        nodoActua = primerNodo;
+        for (int i = 0; i < indice; i++) {
+            nodoActua = nodoActua.getSiguiente();
+        }
+    } else {
+        // Si está más cerca del final, comienza desde el último nodo
+        nodoActua = ultimoNodo;
+        for (int i = longitud - 1; i > indice; i--) {
+            nodoActua = nodoActua.getAnterior();
+        }
+    }
+
+    return nodoActual.getDato();
+}
     ////////////////////////////////////////
     public void eliminar(int indice) {
         if (indice < 0 || indice >= longitud) {
