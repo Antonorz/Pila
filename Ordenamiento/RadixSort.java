@@ -19,7 +19,7 @@ public class RadixSort {
         return max;
     }
     
-    public static int ordeningSort(int[] arr, int length, int exponente){
+    public static void ordeningSort(int[] arr, int length, int exponente){
         int[] salida = new int[length + 1];
         int[] orden = new int[10];
         
@@ -38,8 +38,5 @@ public class RadixSort {
         
         for(int i = 0; i < length; i++)
             arr[i] = salida[i];
-        return length;
-    }
-    
+    }  
 }
-
