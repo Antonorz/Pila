@@ -22,5 +22,10 @@ public class Main {
     System.out.println("Antes: " + Arrays.toString(arrToMergeSort));
     int[] arrMergeSort = MergeSort.mergeSort(arrToMergeSort);
     System.out.println("Ahora: " + Arrays.toString(arrMergeSort));
+
+    System.out.println("Array ordenado con BubbleSort:");
+    System.out.println("Antes: " + Arrays.toString(arrToBubbleSort));
+    int[] arrBubbleSort = BubbleSort.bubbleSort(arrToBubbleSort);
+    System.out.println("Ahora: " + Arrays.toString(arrBubbleSort));
   }
 }
