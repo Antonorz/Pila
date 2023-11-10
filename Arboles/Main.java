@@ -13,8 +13,8 @@ public class Main{
         NodoArbol<String> nodoE = new NodoArbol("E");
         NodoArbol<String> nodoF = new NodoArbol("F");
         
-        arbol.agregarNodoArbol(nodoB, nodoC);
-        arbol.agregarNodoArbol(nodoB, nodoD);
+        arbol.agregarNodoArbol(nodoB, nodoE);
+        arbol.agregarNodoArbol(nodoB, nodoF);
 
         arbol.imprimirArbol(Recorrido.PREFIJO);
         arbol.imprimirArbol(Recorrido.INFIJO);
