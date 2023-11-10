@@ -9,7 +9,12 @@ public class NodoArbol <T> {
     primerHijo = null;
     siguienteHermano = null;
   }
-
+  /*
+  Agregar un hijo: Se introduce un nodo dentro de un arbol, si el primer hijo es nulo quiere decir que nuestro arbol aun necesita de un nodo hijo, en caso contrario 
+  el nodo a agregarse pasa a considerarse hermano, pues ya hay hijos.
+  Despues se detecta si el arbol es binario o no: Si el arbol es binario existira un limite para agregar nodos hijos, pues en binarios el maximo de hijos 
+  son dos, si no es binario no existe un limite de hermanos y podemos agregar los que sean.
+   */
   public void agregarHijo (NodoArbol <T> hijo) {
     if (primerHijo == null) {
       primerHijo = hijo;
