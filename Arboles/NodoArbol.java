@@ -35,15 +35,22 @@ public class NodoArbol <T> {
       }      
     }
   }
-
+  
+  /*
+   * Obtiene el primer hijo del nodo actual.
+   */
   public NodoArbol<T> obtenerPrimerHijo () {
     return primerHijo;
   }
-
+  /*
+   * Obtiene el siguiente hermano.
+   */
   public NodoArbol<T> obtenerSiguienteHermano () {
     return siguienteHermano;
   }
-
+  /**
+   * Setters y Getters
+   */
   public T getDato () {
     return dato;
   }
@@ -55,7 +62,9 @@ public class NodoArbol <T> {
   public void setEsBinario (boolean esBinario) {
     this.esBinario = esBinario;
   }
-
+  /*
+   * Imprime los nodos en prefijo.
+   */
   public void imprimirEnPrefijo() {
     System.out.print(dato + "\t");
     NodoArbol<T> hijo = primerHijo;
@@ -65,7 +74,9 @@ public class NodoArbol <T> {
       hijo = hijo.siguienteHermano;
     }
   }
-
+  /*
+   * Imprime los nodos en infijo.
+   */
   public void imprimirEnInfijo() {
     NodoArbol<T> hijo = primerHijo;
 
@@ -81,7 +92,9 @@ public class NodoArbol <T> {
       }
     }
   }
-
+  /*
+   * Imprime los nodos en posfijo.
+   */
   public void imprimirEnPosfijo() {
     NodoArbol<T> hijo = primerHijo;
 
